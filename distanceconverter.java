@@ -51,8 +51,15 @@ public class distanceconverter {
             conversionFactor = 0.33333333333;
         }
 
-        System.out.println(origin);
-        System.out.println(destination);
-        System.out.println(conversionFactor * value);
+        double finalConversion = value * conversionFactor;
+        System.out.print("\nThere ");
+        if(finalConversion != 1) {
+          System.out.print("are ");
+        } else {
+          System.out.print("is ");
+        }
+        System.out.printf("%,.1f", finalConversion);
+        System.out.printf(" " + destination + " ");
+        System.out.print("in " + value + " " + origin + ".\n\n");
     }
 }
